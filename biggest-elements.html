@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let arr = [5, 7, 8, 6, 1, 9, 4, 3];
+            let big = arr[0];
+            let small = arr[0];
+
+            // Using loop to find biggest element
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > big) big = arr[i];
+            }
+            document.write('Biggest element using loop: ' + big + '<br/>');
+
+         
+            big = arr[0];
+            small = arr[0];
+
+            // Using map to find biggest and smallest
+            arr.map((num) => {
+                if (num < small) {
+                    small = num;
+                }
+                if (num > big) {
+                    big = num;
+                }
+            });
+            document.write('Biggest element using map: ' + big + '<br/>');
+            document.write('Smallest element using map: ' + small + '<br/>');
+
+            // Using Math.min and Math.max
+            const min = Math.min(...arr);
+            const max = Math.max(...arr);
+
+            document.write('<br/>Smallest element using Math.min: ' + min + '<br/>');
+            document.write('Biggest element using Math.max: ' + max + '<br/>');
+        </script>
+    </body>
+</html>
