@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function digitsCount(){
+                let n=parseInt(document.getElementById("num").value);
+                let count=0;
+                while(n>0){
+                    n=parseInt(n/10);
+                    count++;
+                }
+                document.write("Number of Digits:"+ count);
+            }
+        </script>
+    </head>
+    <body>
+        Enter Number:<input type="text" id="num"/>
+        <button onclick="digitsCount()">Digits Count</button>
+        </body>
+</html>
